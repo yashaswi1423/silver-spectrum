@@ -129,6 +129,7 @@
   .btn.primary {
     background: linear-gradient(90deg, var(--primary), var(--accent)); color: #fff; box-shadow: var(--shadow);
   }
+  
   .btn.primary:hover { filter: brightness(1.05); }
   .btn.outline {
     border: 2px solid var(--primary); color: var(--primary-700); background: transparent;
@@ -241,6 +242,8 @@
   @media (max-width: 720px) {
     .header-inner { grid-template-columns: 1fr; row-gap: .5rem; }
     .logo.left, .logo.center, .logo.right { justify-content: center; }
+    /* Let the header (logos) scroll away on small screens */
+    .site-header { position: static; }
     .grid.two { grid-template-columns: 1fr; }
     .cards { grid-template-columns: repeat(2, 1fr); }
     .logo img { max-height: 56px; }
